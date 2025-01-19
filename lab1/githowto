@@ -1,0 +1,129 @@
+#Setting up name and email address
+
+git config --global user.name "Your Name"
+git config --global user.email "your_email@whatever.com"
+
+#Default branch name
+
+git config --global init.defaultBranch main
+
+#Line endings treatment
+
+git config --global core.autocrlf true
+git config --global core.safecrlf warn
+
+#Create a repository
+
+git init
+
+#Add the page to the repository
+
+git add hello.html
+git commit -m "Initial Commit"
+
+#Check the status of the repository
+
+git status
+
+#Adding changes
+
+git add hello.html
+git status
+
+#Staging and committing
+
+git add a.html
+git add b.html
+git commit -m "Changes for a and b"
+
+#Committing the changes
+
+git commit
+
+#Add the change
+
+git add hello.html
+
+#History
+
+git log
+
+#One line history
+
+git log --oneline
+
+#Controlling the display of entries
+
+git log --oneline --max-count=2
+git log --oneline --since="5 minutes ago"
+git log --oneline --until="5 minutes ago"
+git log --oneline --author="Your Name"
+git log --oneline --all
+
+#Getting fancy
+
+git log --all --pretty=format:"%h %cd %s (%an)" --since="7 days ago"
+
+#The ultimate format of the log
+
+git log --pretty=format:"%h %ad | %s%d [%an]" --date=short
+
+--pretty="..." defines the output format.
+%h is the abbreviated hash of the commit.
+%ad is the commit date.
+| is just a visual separator.
+%s is the comment.
+%d commit decorations (e.g. branch heads or tags).
+%an is the name of the author.
+--date=short keeps the date format short and nice.
+
+#Returning to the latest version in the main branch
+
+git switch main
+cat hello.html
+
+#Tagging versions
+
+git tag v1
+git log
+
+#Tags for previous versions
+
+git checkout v1^
+cat hello.html
+
+git tag v1-beta
+git log
+
+#Check out by the tag name
+
+git checkout v1
+git checkout v1-beta
+
+#Viewing tags with the tag command
+
+git tag
+
+#Viewing tags in logs
+
+git log main --all
+
+#Discarding local changes (before staging)
+
+git switch main
+
+#Undoing the changes in the working directory
+
+
+git checkout hello.html
+git status
+cat hello.html
+
+# Reset the staging area
+
+git reset HEAD hello.html
+
+#Switch to commit version
+
+git checkout hello.html
+git status
