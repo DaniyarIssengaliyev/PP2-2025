@@ -1,4 +1,6 @@
 import math
-radius = int(input("Enter radius of a sphere: "))
+def volume():
+    return 4/3 * math.pi * radius**3
 
-print("Volume of a sphere: ", 4/3 * math.pi * radius**3)
+radius = int(input("Enter radius of a sphere: "))
+print(volume())
