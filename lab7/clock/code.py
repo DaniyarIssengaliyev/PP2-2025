@@ -3,9 +3,9 @@ pygame.init()
 
 size = (800, 600)
 screen = pygame.display.set_mode(size)
-back = pygame.image.load("D:\VsCode\python\lab7\clock/mickey.jpg")
-seconds = pygame.image.load("D:\VsCode\python\lab7\clock\lhand.png")
-minutes = pygame.image.load("D:\VsCode\python\lab7\clock/rhand.png")
+back = pygame.image.load("C:\\Users\\Daniyar\\Desktop\\PP2 2025\\lab7\\clock.png")
+seconds = pygame.image.load("C:\\Users\\Daniyar\\Desktop\\PP2 2025\\lab7\\sec_hand.png")
+minutes = pygame.image.load("C:\\Users\\Daniyar\\Desktop\\PP2 2025\\lab7\\min_hand.png")
 
 done = True
 while done:
