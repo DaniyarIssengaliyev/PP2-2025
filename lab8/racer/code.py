@@ -10,8 +10,8 @@ clock = pg.time.Clock()
 y = 0
 ry = 2
 step, enemy_step, score, score_coin = 5, 5, 0, 0
-game_over = pg.image.load("gameover.jpg")
-bg = pg.image.load("track.png")
+game_over = pg.image.load("A:\\PP2 2025\\lab8\\racer\\gameover.jpg")
+bg = pg.image.load("A:\\PP2 2025\\lab8\\racer\\track.png")
 game_over = pg.transform.scale(game_over, (w, h))
 # задаем фонт для текста
 score_font = pg.font.SysFont("Verdana", 20)
@@ -20,7 +20,7 @@ score_coins = pg.font.SysFont("Verdana", 20)
 class Enemy(pg.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.image = pg.image.load("Enemy.png") # загружаем картинку
+        self.image = pg.image.load("A:\\PP2 2025\\lab8\\racer\\Enemy.png") # загружаем картинку
         self.rect = self.image.get_rect()
         self.rect.center = (random.randint(40, w - 40), 0) # задаем рандомные координаты
 
@@ -39,7 +39,7 @@ class Enemy(pg.sprite.Sprite):
 class Player(pg.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.image = pg.image.load("Player.png") # загружаем картинку
+        self.image = pg.image.load("A:\\PP2 2025\\lab8\\racer\\Player.png") # загружаем картинку
         self.rect = self.image.get_rect()
         self.rect.center = (160, 520)
 
@@ -67,7 +67,7 @@ class Player(pg.sprite.Sprite):
 class Coin(pg.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.image = pg.image.load("coin.png") # загружаем картинку
+        self.image = pg.image.load("A:\\PP2 2025\\lab8\\racer\\coin.png") # загружаем картинку
         self.rect = self.image.get_rect()
         self.rect.center = (random.randint(30, w - 30), random.randint(30, h - 130)) # рандомные координаты для монетки
 

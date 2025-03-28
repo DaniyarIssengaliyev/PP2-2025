@@ -7,10 +7,10 @@ screen_width = 375
 screen_height = 812
 screen = pygame.display.set_mode((screen_width, screen_height))
 
-iphone_img = pygame.image.load('C:\\Users\\Daniyar\\Desktop\\PP2 2025\\lab7\\player\\img\\phone.jpeg')
+iphone_img = pygame.image.load('A:\\PP2 2025\\lab7\\player\\img\\phone.jpeg')
 iphone_img = pygame.transform.scale(iphone_img, (screen_width, screen_height))
 
-music_dir = 'C:\\Users\\Daniyar\\Desktop\\PP2 2025\\lab7\\player'
+music_dir = 'A:\\PP2 2025\\lab7\\player'
 
 music_files = [f for f in os.listdir(music_dir) if f.endswith('.mp3')]
 
